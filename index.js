@@ -20,7 +20,7 @@ const targetDate = new Date('2024-12-11T00:00:00').getTime();
 // Element countdown
 const countdownElement = document.querySelector('.countdown');
 
-// Function untuk menghitung sisa waktu
+// menghitung sisa waktu
 function updateCountdown() {
   const now = new Date().getTime();
   const timeLeft = targetDate - now;
@@ -65,8 +65,8 @@ function updateRemainingTime() {
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    // Tampilkan deskripsi waktu tersisa
-    remainingTimeElement.innerHTML = `Hitung mundur.
+    // waktu tersisa
+    remainingTimeElement.innerHTML = `countdown
       <span>${days}H,</span> 
       <span>${hours}J,</span> 
       <span>${minutes}M,</span> 
@@ -76,6 +76,6 @@ function updateRemainingTime() {
   }
 }
 
-// Jalankan updateRemainingTime setiap detik
+// updateRemainingTime setiap detik
 setInterval(updateRemainingTime, 1000);
 updateRemainingTime(); // Jalankan sekali saat halaman pertama kali dimuat
