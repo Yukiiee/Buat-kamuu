@@ -66,7 +66,7 @@ function updateRemainingTime() {
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
     // waktu tersisa
-    remainingTimeElement.innerHTML = `countdown
+    remainingTimeElement.innerHTML = `
       <span>${days}H,</span> 
       <span>${hours}J,</span> 
       <span>${minutes}M,</span> 
